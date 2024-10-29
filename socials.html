@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *,
+        *:before,
+        *:after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            height: 100vh;
+            width: 100%;
+            background-color: gainsboro;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(51, 51, 51);
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+        }
+        .card{
+            background-color: white;
+            width: 80%;
+            max-width: 700px;
+            min-width: 200px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1.5fr 2fr 1fr 2fr;
+            box-shadow: -4px -3px 45px 11px rgba(0,0,0,0.35);
+        }
+        .card:hover{
+            box-shadow: -4px -3px 45px 13px rgba(0,0,0,0.35);
+            transition: box-shadow 0.6s;
+        }
+        .button{
+            padding: 10px;
+            text-align: right;
+        }
+        .close-btn{
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: large;
+        }
+
+        .links{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .links button{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: lightgray;
+            cursor: pointer;
+            width: 120px;
+        }
+        #fb{
+            background-color: lightskyblue;
+        }
+        #tw{
+            background-color: lightpink;
+        }
+        #rd{
+            background-color: lightsalmon;
+        }
+        .description-title{
+            font-size: 20px;
+        }
+        .description, .footer{
+            display: grid;
+            place-items: center;
+        }
+        .footer{
+            color: orange;
+        }
+        .footer p{
+            cursor: pointer;
+        }
+        @media screen and (max-width: 520px) {
+            .links{
+                flex-direction: column;
+                padding: 5px;
+            }
+            .card{
+                grid-template-rows: 1fr 1fr 1.5fr 3fr 1fr 2fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="button">
+                <button class="close-btn">X</button>
+            </div>
+            <div class="header">
+                <h2 class="headed-title">
+                    Share this article
+                </h2>
+            </div>
+            <div class="content">
+                <div class="content-text">
+                    If you liked this article share it with your friends.<br>
+                    They will thank you later.
+                </div>
+            </div>
+            <div class="links">
+                <button id="fb">Facebook</button>
+                <button id="tw">Twitter</button>
+                <button id="rd">Reddit</button>
+            </div>
+            <div class="description">
+                <h3 class="description-title">
+                    4,5 K shares
+                </h3>
+            </div>
+            <div class="footer">
+                <p>Close this window</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

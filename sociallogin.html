@@ -1,0 +1,148 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *,
+        *:before,
+        *:after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body{
+            min-height: 100vh;
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(255, 247, 234);
+            color: rgb(113, 28, 28);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            padding: 20px;
+        }
+        .card{
+            width: 100%;
+            max-width: 1000px;
+            min-width: 600px;
+            height: 400px;
+            position: relative;
+            background-color: white;
+            display: grid;
+            place-items: center;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        }
+        .card-body{
+            display: grid;
+            place-items: center;
+            /* grid-template-rows: auto; */
+            align-content: center;
+            gap: 40px;
+            background-color: bisque;
+            width: 93%;
+            height: 85%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        }
+        .circles{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            position: absolute;
+            bottom: -30px;
+            overflow: visible;
+        }
+        .circle{
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            background-color: rgb(255, 204, 123);
+            display: grid;
+            place-items: center;
+        }
+        .inner-circle{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .input-container {
+            display: flex;
+            justify-content: center;
+            width: 60%;
+            height: 50px;
+        }
+
+        input[type="email"] {
+            padding: 20px;
+            border: none;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+            width: 70%;
+        }
+
+        button {
+            padding: 15px;
+            border: none;
+            background-color: rgb(255, 247, 234);
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+            color: #2b59c3;
+            font-size: large;
+            font-weight: bold;
+        }
+        h1{
+            font-size: 2.5rem;
+        }
+        h3{
+            text-align: center;
+        }
+        @media screen and (max-width: 760px) {
+            .circle{
+                width: 70px;
+                height: 70px;
+            }
+            .inner-circle{
+                width: 50px;
+                height: 50px;
+            }
+            .circles{
+                bottom: -20px;
+            }
+        }
+    </style>
+</head>
+<!-- Change code below this line -->
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1>Already working together?</h1>
+                <h3>Log in to your account and connect with<br>your teammates!</h3>
+                <div class="input-container">
+                    <input type="email" placeholder="youremail@address.com">
+                    <button>→</button>
+                </div>
+            </div>
+            <div class="circles">
+                <div class="circle"><div class="inner-circle"></div></div>
+                <div class="circle"><div class="inner-circle"></div></div>
+                <div class="circle"><div class="inner-circle"></div></div>
+                <div class="circle"><div class="inner-circle"></div></div>
+                <div class="circle"><div class="inner-circle"></div></div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Change code above this line -->
+
+</html>
